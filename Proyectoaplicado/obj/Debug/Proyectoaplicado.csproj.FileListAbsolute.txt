@@ -104,3 +104,7 @@ C:\Users\Hector\source\repos\Proyectoaplicado\Proyectoaplicado\bin\Debug\zh-CHS\
 C:\Users\Hector\source\repos\Proyectoaplicado\Proyectoaplicado\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
 C:\Users\Hector\source\repos\Proyectoaplicado\Proyectoaplicado\obj\Debug\Proyectoaplicado.FrmProductos.resources
 C:\Users\Hector\source\repos\Proyectoaplicado\Proyectoaplicado\obj\Debug\Proyectoaplicado.FrmProveedores.resources
+C:\Users\Hector\source\repos\Proyectoaplicado\Proyectoaplicado\obj\Debug\Proyectoaplicado.FrmReportecliente.resources
+C:\Users\Hector\source\repos\Proyectoaplicado\Proyectoaplicado\obj\Debug\Proyectoaplicado.FrmReporteproductos.resources
+C:\Users\Hector\source\repos\Proyectoaplicado\Proyectoaplicado\obj\Debug\Proyectoaplicado.FrmReportepedidos.resources
+C:\Users\Hector\source\repos\Proyectoaplicado\Proyectoaplicado\obj\Debug\Proyectoaplicado.FrmReporteventas.resources

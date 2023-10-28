@@ -31,6 +31,10 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
+			this.panel2 = new System.Windows.Forms.Panel();
+			this.principal = new System.Windows.Forms.Panel();
+			this.btnCerrar = new System.Windows.Forms.PictureBox();
 			this.pictureBox7 = new System.Windows.Forms.PictureBox();
 			this.pictureBox6 = new System.Windows.Forms.PictureBox();
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -46,11 +50,9 @@
 			this.Btnventas = new Guna.UI.WinForms.GunaAdvenceButton();
 			this.btnCliente = new Guna.UI.WinForms.GunaAdvenceButton();
 			this.Btnpedidos = new Guna.UI.WinForms.GunaAdvenceButton();
-			this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.btnCerrar = new System.Windows.Forms.PictureBox();
-			this.principal = new System.Windows.Forms.Panel();
 			this.panel1.SuspendLayout();
+			this.panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -59,8 +61,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
-			this.panel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -86,6 +86,43 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(211, 564);
 			this.panel1.TabIndex = 0;
+			// 
+			// gunaElipse1
+			// 
+			this.gunaElipse1.TargetControl = this;
+			// 
+			// panel2
+			// 
+			this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.panel2.Controls.Add(this.btnCerrar);
+			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel2.Location = new System.Drawing.Point(211, 0);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(839, 38);
+			this.panel2.TabIndex = 1;
+			this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+			// 
+			// principal
+			// 
+			this.principal.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.principal.Location = new System.Drawing.Point(211, 38);
+			this.principal.Name = "principal";
+			this.principal.Size = new System.Drawing.Size(839, 526);
+			this.principal.TabIndex = 2;
+			this.principal.Paint += new System.Windows.Forms.PaintEventHandler(this.principal_Paint_1);
+			// 
+			// btnCerrar
+			// 
+			this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+			this.btnCerrar.Location = new System.Drawing.Point(809, 7);
+			this.btnCerrar.Name = "btnCerrar";
+			this.btnCerrar.Size = new System.Drawing.Size(25, 25);
+			this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.btnCerrar.TabIndex = 1;
+			this.btnCerrar.TabStop = false;
+			this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
 			// 
 			// pictureBox7
 			// 
@@ -403,48 +440,11 @@
 			this.Btnpedidos.Text = "           Pedidos";
 			this.Btnpedidos.Click += new System.EventHandler(this.Btnpedidos_Click);
 			// 
-			// gunaElipse1
-			// 
-			this.gunaElipse1.TargetControl = this;
-			// 
-			// panel2
-			// 
-			this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
-			this.panel2.Controls.Add(this.btnCerrar);
-			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel2.Location = new System.Drawing.Point(211, 0);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(765, 38);
-			this.panel2.TabIndex = 1;
-			this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-			// 
-			// btnCerrar
-			// 
-			this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-			this.btnCerrar.Location = new System.Drawing.Point(735, 7);
-			this.btnCerrar.Name = "btnCerrar";
-			this.btnCerrar.Size = new System.Drawing.Size(25, 25);
-			this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.btnCerrar.TabIndex = 1;
-			this.btnCerrar.TabStop = false;
-			this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-			// 
-			// principal
-			// 
-			this.principal.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.principal.Location = new System.Drawing.Point(211, 38);
-			this.principal.Name = "principal";
-			this.principal.Size = new System.Drawing.Size(765, 526);
-			this.principal.TabIndex = 2;
-			this.principal.Paint += new System.Windows.Forms.PaintEventHandler(this.principal_Paint_1);
-			// 
 			// FrmMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(976, 564);
+			this.ClientSize = new System.Drawing.Size(1050, 564);
 			this.Controls.Add(this.principal);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
@@ -452,6 +452,8 @@
 			this.Name = "FrmMenu";
 			this.Text = "Menu";
 			this.panel1.ResumeLayout(false);
+			this.panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -460,8 +462,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
-			this.panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
 			this.ResumeLayout(false);
 
         }

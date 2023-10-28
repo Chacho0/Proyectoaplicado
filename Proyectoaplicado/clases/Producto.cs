@@ -19,7 +19,7 @@ namespace Proyectoaplicado.clases
 			try
 			{
 				Tabla.DataSource = null;
-				SqlDataAdapter adapter = new SqlDataAdapter("select * from Productos;", objetConexion.Establecerconexion());
+				SqlDataAdapter adapter = new SqlDataAdapter("select ProductoID as ID,Nombreproveedor as Nombre,Descripcion,Categoria,Cantidad,Precio,totalapagar as Total from Productos;", objetConexion.Establecerconexion());
 				DataTable dt = new DataTable();
 
 				adapter.Fill(dt);

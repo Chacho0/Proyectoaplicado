@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,13 +15,15 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView;
 
 namespace Proyecto_1
 {
-    public partial class FrmVentas : Form
-    {
-        public FrmVentas()
-        {
-            InitializeComponent();
+	public partial class FrmVentas : Form
+	{
+		public FrmVentas()
+		{
+			InitializeComponent();
 			
-			
+			Dateventa.Value = DateTime.Today;
+
+
 		}
 
 		private void gunaDateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -31,17 +34,17 @@ namespace Proyecto_1
 		private void gunaButton3_Click(object sender, EventArgs e)
 		{
 			ventas l = new ventas();
-			l.BuscarCliente(txtpedidos.Text,dgvpedidos);
+			l.BuscarCliente(txtpedidos.Text, dgvpedidos);
 		}
 
 		private void dgvpedidos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
-			
+
 		}
 
 		private void dgvpedidos_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
 		{
-			
+
 		}
 
 		private void dgvpedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -51,7 +54,7 @@ namespace Proyecto_1
 
 		private void dgvpedidos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
-		
+
 
 		}
 
@@ -98,7 +101,7 @@ namespace Proyecto_1
 		}
 		private void FrmVentas_Load(object sender, EventArgs e)
 		{
-			this.reportViewer1.RefreshReport();
+
 		}
 		private void dgvventas_CellValueChanged(object sender, DataGridViewCellEventArgs e)
 		{
@@ -131,7 +134,7 @@ namespace Proyecto_1
 
 			// Muestra la suma total y la suma de ITBIS en los TextBox
 			txttotal.Text = sumaTotal.ToString();
-			
+
 
 		}
 
@@ -157,7 +160,7 @@ namespace Proyecto_1
 		private decimal CalcularMontoTotal(int precioRopa, decimal itb)
 		{
 			// Implementa tu lógica para calcular el monto total (por ejemplo, sumar el ITB al precio)
-			return precioRopa +itb;
+			return precioRopa + itb;
 		}
 		public void RegistrarVenta()
 		{
@@ -247,7 +250,7 @@ namespace Proyecto_1
 				{
 					EliminarPedidoDeBaseDeDatos(pedidoID);
 					dgvventas.Rows.Remove(row);
-					i--; 
+					i--;
 				}
 			}
 		}
@@ -316,10 +319,10 @@ namespace Proyecto_1
 
 		private void CargarPedidosClienteEnDataGridView(int clienteID)
 		{
-			
+
 			string connectionString = "Data Source=DESKTOP-TP2GOM2\\SQLEXPRESS;Initial Catalog=Lavanderia;Integrated Security=True";
 			string query = "SELECT  PedidosID as ID, CodigoID as Codigo, Tipoderopa as Ropa, Precio FROM Pedidos WHERE CodigoID = @ClienteID";
-			
+
 			using (SqlConnection connection = new SqlConnection(connectionString))
 			{
 				connection.Open();
@@ -374,6 +377,91 @@ namespace Proyecto_1
 		{
 			this.Close();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			
+		
+		}
+		private void Detalledeventa_MouseDown(object sender, MouseEventArgs e)
+		{
+			
+		}
+
+		private void btnCerrar_Click(object sender, EventArgs e)
+		{
+			Detalledeventa.Visible = false;
+			btnCerrar.Visible = false;
+		}
+
+		private void Txtfacturar_Click(object sender, EventArgs e)
+		{
+			btnCerrar.Visible = true;
+			Detalledeventa.Visible = true;
+		
+			Detalledeventa.Items.Clear();
+
+			// Construye el contenido de la factura línea por línea
+			Detalledeventa.Items.Add("      Lavanderia Central");
+			Detalledeventa.Items.Add("C/17  Centro de la Ciudad. Cotui");
+			Detalledeventa.Items.Add("Tel. 809-000-0000");
+			// Obtén la fecha desde el control GunaDateTimePicker
+			string fechaVenta = "Fecha de la Venta\t" + Dateventa.Value.ToString("dd/MM/yyyy");
+			Detalledeventa.Items.Add(fechaVenta);
+			Detalledeventa.Items.Add("___________________________________");
+			Detalledeventa.Items.Add("Factura Consumidor final");
+			Detalledeventa.Items.Add("___________________________________");
+			Detalledeventa.Items.Add("Descripcion\tITB\tPrecio");
+
+			// Agrega los detalles de venta desde el DataGridView al ListBox
+			foreach (DataGridViewRow row in dgvventas.Rows)
+			{
+				if (!row.IsNewRow)
+				{
+					string descripcion = row.Cells["Ropa"].Value.ToString();
+					string itb = "18%"; // Puedes obtener el valor real del ITB desde tus datos
+					string precio = row.Cells["Precio"].Value.ToString();
+
+					// Formatea la línea para alinear correctamente los valores
+					string linea = $"{descripcion}\t\t{itb}\t{precio}";
+
+					Detalledeventa.Items.Add(linea);
+				}
+			}
+
+			Detalledeventa.Items.Add("___________________________________");
+
+			// Obtén el valor del monto entregado desde Txtmontopagado
+			string montoEntregado = "Monto Entregado\t" + Txtmontopagado.Text;
+			Detalledeventa.Items.Add(montoEntregado);
+
+			// Obtén el valor del total a pagar desde txttotal
+			string total = "Total\t\t" + txttotal.Text;
+			Detalledeventa.Items.Add(total);
+
+
+
+			// Calcula el monto a devolver
+			decimal montoAPagar = decimal.Parse(txttotal.Text);
+			decimal montoEntregadoValor = 0;
+
+			if (decimal.TryParse(Txtmontopagado.Text, out montoEntregadoValor))
+			{
+				// El valor se convirtió correctamente
+			}
+			else
+			{
+				// La cadena no es convertible a decimal, por lo tanto, se establece a cero
+				montoEntregadoValor = 0;
+			}
+			decimal montoDevolverValor = montoEntregadoValor - montoAPagar;
+			string montoDevolver = "Monto a devolver\t" + montoDevolverValor.ToString();
+			Detalledeventa.Items.Add(montoDevolver);
+			Detalledeventa.Items.Add("________________________________________");
+			Detalledeventa.Items.Add("Gracias por su pedir nuestros servicios\n");
+
+		}
 	}
 }
+
 

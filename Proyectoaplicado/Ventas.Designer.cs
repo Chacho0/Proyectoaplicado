@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentas));
 			this.label1 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -48,16 +48,19 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.txtITB = new Guna.UI.WinForms.GunaTextBox();
 			this.Txtmontopagado = new Guna.UI.WinForms.GunaTextBox();
+			this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
+			this.Cantidadpercha = new System.Windows.Forms.NumericUpDown();
+			this.Detalledeventa = new System.Windows.Forms.ListBox();
+			this.Txtfacturar = new Guna.UI.WinForms.GunaButton();
+			this.btnCerrar = new System.Windows.Forms.PictureBox();
+			this.Devolver = new System.Windows.Forms.PictureBox();
 			this.btnbuscar = new Guna.UI.WinForms.GunaButton();
 			this.txtcalcular = new Guna.UI.WinForms.GunaAdvenceButton();
 			this.txtpago = new Guna.UI.WinForms.GunaAdvenceButton();
-			this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-			this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
-			this.Cantidadpercha = new System.Windows.Forms.NumericUpDown();
-			this.Devolver = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvpedidos)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvventas)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Cantidadpercha)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Devolver)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -65,7 +68,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(473, 33);
+			this.label1.Location = new System.Drawing.Point(517, 43);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(74, 16);
 			this.label1.TabIndex = 0;
@@ -156,7 +159,7 @@
 			this.txtpedidos.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
 			this.txtpedidos.FocusedForeColor = System.Drawing.SystemColors.ControlText;
 			this.txtpedidos.Font = new System.Drawing.Font("Segoe UI", 9F);
-			this.txtpedidos.Location = new System.Drawing.Point(547, 24);
+			this.txtpedidos.Location = new System.Drawing.Point(591, 34);
 			this.txtpedidos.Name = "txtpedidos";
 			this.txtpedidos.PasswordChar = '\0';
 			this.txtpedidos.Radius = 5;
@@ -167,37 +170,37 @@
 			// dgvpedidos
 			// 
 			this.dgvpedidos.AllowUserToAddRows = false;
-			dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-			this.dgvpedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+			this.dgvpedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvpedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvpedidos.BackgroundColor = System.Drawing.Color.White;
 			this.dgvpedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvpedidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.dgvpedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-			dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvpedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvpedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvpedidos.ColumnHeadersHeight = 20;
-			dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-			dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvpedidos.DefaultCellStyle = dataGridViewCellStyle15;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvpedidos.DefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvpedidos.EnableHeadersVisualStyles = false;
 			this.dgvpedidos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			this.dgvpedidos.Location = new System.Drawing.Point(476, 60);
+			this.dgvpedidos.Location = new System.Drawing.Point(520, 70);
 			this.dgvpedidos.Name = "dgvpedidos";
 			this.dgvpedidos.RowHeadersVisible = false;
 			this.dgvpedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvpedidos.Size = new System.Drawing.Size(300, 322);
+			this.dgvpedidos.Size = new System.Drawing.Size(247, 322);
 			this.dgvpedidos.TabIndex = 16;
 			this.dgvpedidos.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
 			this.dgvpedidos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -230,37 +233,37 @@
 			// dgvventas
 			// 
 			this.dgvventas.AllowUserToAddRows = false;
-			dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-			this.dgvventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+			this.dgvventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvventas.BackgroundColor = System.Drawing.Color.White;
 			this.dgvventas.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dgvventas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.dgvventas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-			dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+			dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
 			this.dgvventas.ColumnHeadersHeight = 20;
-			dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-			dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-			dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvventas.DefaultCellStyle = dataGridViewCellStyle18;
+			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+			dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvventas.DefaultCellStyle = dataGridViewCellStyle6;
 			this.dgvventas.EnableHeadersVisualStyles = false;
 			this.dgvventas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
 			this.dgvventas.Location = new System.Drawing.Point(12, 137);
 			this.dgvventas.Name = "dgvventas";
 			this.dgvventas.RowHeadersVisible = false;
 			this.dgvventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvventas.Size = new System.Drawing.Size(455, 245);
+			this.dgvventas.Size = new System.Drawing.Size(439, 245);
 			this.dgvventas.TabIndex = 16;
 			this.dgvventas.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
 			this.dgvventas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -353,6 +356,87 @@
 			this.Txtmontopagado.TabIndex = 20;
 			this.Txtmontopagado.TextChanged += new System.EventHandler(this.Txtmontopagado_TextChanged_1);
 			// 
+			// gunaCheckBox1
+			// 
+			this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
+			this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
+			this.gunaCheckBox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
+			this.gunaCheckBox1.Location = new System.Drawing.Point(291, 84);
+			this.gunaCheckBox1.Name = "gunaCheckBox1";
+			this.gunaCheckBox1.Size = new System.Drawing.Size(66, 20);
+			this.gunaCheckBox1.TabIndex = 22;
+			this.gunaCheckBox1.Text = "Percha";
+			// 
+			// Cantidadpercha
+			// 
+			this.Cantidadpercha.Location = new System.Drawing.Point(381, 84);
+			this.Cantidadpercha.Name = "Cantidadpercha";
+			this.Cantidadpercha.Size = new System.Drawing.Size(41, 20);
+			this.Cantidadpercha.TabIndex = 23;
+			// 
+			// Detalledeventa
+			// 
+			this.Detalledeventa.FormattingEnabled = true;
+			this.Detalledeventa.Location = new System.Drawing.Point(520, 70);
+			this.Detalledeventa.Name = "Detalledeventa";
+			this.Detalledeventa.Size = new System.Drawing.Size(247, 329);
+			this.Detalledeventa.TabIndex = 40;
+			this.Detalledeventa.Visible = false;
+			this.Detalledeventa.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Detalledeventa_MouseDown);
+			// 
+			// Txtfacturar
+			// 
+			this.Txtfacturar.AnimationHoverSpeed = 0.07F;
+			this.Txtfacturar.AnimationSpeed = 0.03F;
+			this.Txtfacturar.BackColor = System.Drawing.Color.Transparent;
+			this.Txtfacturar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+			this.Txtfacturar.BorderColor = System.Drawing.Color.Black;
+			this.Txtfacturar.DialogResult = System.Windows.Forms.DialogResult.None;
+			this.Txtfacturar.FocusedColor = System.Drawing.Color.Empty;
+			this.Txtfacturar.Font = new System.Drawing.Font("Segoe UI", 9F);
+			this.Txtfacturar.ForeColor = System.Drawing.Color.White;
+			this.Txtfacturar.Image = ((System.Drawing.Image)(resources.GetObject("Txtfacturar.Image")));
+			this.Txtfacturar.ImageSize = new System.Drawing.Size(20, 20);
+			this.Txtfacturar.Location = new System.Drawing.Point(348, 393);
+			this.Txtfacturar.Name = "Txtfacturar";
+			this.Txtfacturar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+			this.Txtfacturar.OnHoverBorderColor = System.Drawing.Color.Black;
+			this.Txtfacturar.OnHoverForeColor = System.Drawing.Color.White;
+			this.Txtfacturar.OnHoverImage = null;
+			this.Txtfacturar.OnPressedColor = System.Drawing.Color.Black;
+			this.Txtfacturar.Radius = 10;
+			this.Txtfacturar.Size = new System.Drawing.Size(96, 31);
+			this.Txtfacturar.TabIndex = 43;
+			this.Txtfacturar.Text = "Facturar";
+			this.Txtfacturar.Click += new System.EventHandler(this.Txtfacturar_Click);
+			// 
+			// btnCerrar
+			// 
+			this.btnCerrar.BackColor = System.Drawing.Color.LightGray;
+			this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+			this.btnCerrar.Location = new System.Drawing.Point(752, 70);
+			this.btnCerrar.Name = "btnCerrar";
+			this.btnCerrar.Size = new System.Drawing.Size(15, 17);
+			this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.btnCerrar.TabIndex = 42;
+			this.btnCerrar.TabStop = false;
+			this.btnCerrar.Visible = false;
+			this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+			// 
+			// Devolver
+			// 
+			this.Devolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.Devolver.Image = global::Proyectoaplicado.Properties.Resources.atras;
+			this.Devolver.Location = new System.Drawing.Point(758, 2);
+			this.Devolver.Name = "Devolver";
+			this.Devolver.Size = new System.Drawing.Size(27, 26);
+			this.Devolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.Devolver.TabIndex = 39;
+			this.Devolver.TabStop = false;
+			this.Devolver.Click += new System.EventHandler(this.Devolver_Click);
+			// 
 			// btnbuscar
 			// 
 			this.btnbuscar.AnimationHoverSpeed = 0.07F;
@@ -366,7 +450,7 @@
 			this.btnbuscar.ForeColor = System.Drawing.Color.White;
 			this.btnbuscar.Image = global::Proyectoaplicado.Properties.Resources.icons8_buscar_50;
 			this.btnbuscar.ImageSize = new System.Drawing.Size(20, 20);
-			this.btnbuscar.Location = new System.Drawing.Point(649, 24);
+			this.btnbuscar.Location = new System.Drawing.Point(693, 34);
 			this.btnbuscar.Name = "btnbuscar";
 			this.btnbuscar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
 			this.btnbuscar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -445,55 +529,17 @@
 			this.txtpago.Text = "Pagar";
 			this.txtpago.Click += new System.EventHandler(this.txtpago_Click);
 			// 
-			// reportViewer1
-			// 
-			this.reportViewer1.Location = new System.Drawing.Point(473, 60);
-			this.reportViewer1.Name = "reportViewer1";
-			this.reportViewer1.ServerReport.BearerToken = null;
-			this.reportViewer1.Size = new System.Drawing.Size(300, 333);
-			this.reportViewer1.TabIndex = 21;
-			this.reportViewer1.Visible = false;
-			// 
-			// gunaCheckBox1
-			// 
-			this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
-			this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
-			this.gunaCheckBox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-			this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
-			this.gunaCheckBox1.Location = new System.Drawing.Point(291, 84);
-			this.gunaCheckBox1.Name = "gunaCheckBox1";
-			this.gunaCheckBox1.Size = new System.Drawing.Size(66, 20);
-			this.gunaCheckBox1.TabIndex = 22;
-			this.gunaCheckBox1.Text = "Percha";
-			// 
-			// Cantidadpercha
-			// 
-			this.Cantidadpercha.Location = new System.Drawing.Point(381, 84);
-			this.Cantidadpercha.Name = "Cantidadpercha";
-			this.Cantidadpercha.Size = new System.Drawing.Size(41, 20);
-			this.Cantidadpercha.TabIndex = 23;
-			// 
-			// Devolver
-			// 
-			this.Devolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.Devolver.Image = global::Proyectoaplicado.Properties.Resources.atras;
-			this.Devolver.Location = new System.Drawing.Point(856, 2);
-			this.Devolver.Name = "Devolver";
-			this.Devolver.Size = new System.Drawing.Size(27, 26);
-			this.Devolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.Devolver.TabIndex = 39;
-			this.Devolver.TabStop = false;
-			this.Devolver.Click += new System.EventHandler(this.Devolver_Click);
-			// 
 			// FrmVentas
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(882, 575);
+			this.ClientSize = new System.Drawing.Size(784, 575);
+			this.Controls.Add(this.Txtfacturar);
+			this.Controls.Add(this.btnCerrar);
+			this.Controls.Add(this.Detalledeventa);
 			this.Controls.Add(this.Devolver);
 			this.Controls.Add(this.Cantidadpercha);
 			this.Controls.Add(this.gunaCheckBox1);
-			this.Controls.Add(this.reportViewer1);
 			this.Controls.Add(this.Txtmontopagado);
 			this.Controls.Add(this.txtITB);
 			this.Controls.Add(this.txttotal);
@@ -518,6 +564,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.dgvpedidos)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvventas)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Cantidadpercha)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Devolver)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -542,9 +589,11 @@
 		private Guna.UI.WinForms.GunaAdvenceButton txtcalcular;
 		private Guna.UI.WinForms.GunaTextBox txtITB;
 		private Guna.UI.WinForms.GunaTextBox Txtmontopagado;
-		private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
 		private Guna.UI.WinForms.GunaCheckBox gunaCheckBox1;
 		private System.Windows.Forms.NumericUpDown Cantidadpercha;
 		private System.Windows.Forms.PictureBox Devolver;
+		private System.Windows.Forms.ListBox Detalledeventa;
+		private System.Windows.Forms.PictureBox btnCerrar;
+		private Guna.UI.WinForms.GunaButton Txtfacturar;
 	}
 }

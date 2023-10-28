@@ -19,7 +19,9 @@ namespace Proyecto_1
             InitializeComponent();
 			Pedido l = new Pedido();
 			l.Pedidosinformacion(gunaDataGridView1);
-        }
+			datetimefechaentrega.Value = DateTime.Today;
+			datetimefechaespera.Value = DateTime.Today;
+		}
 		
 		private void fRmPedidos_MouseDown(object sender, MouseEventArgs e)
 		{

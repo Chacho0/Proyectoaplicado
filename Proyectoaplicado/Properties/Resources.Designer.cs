@@ -113,6 +113,16 @@ namespace Proyectoaplicado.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap emblemunreadable_93487 {
+            get {
+                object obj = ResourceManager.GetObject("emblemunreadable_93487", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap group_highlight_people_icon_153761 {
             get {
                 object obj = ResourceManager.GetObject("group_highlight_people_icon_153761", resourceCulture);

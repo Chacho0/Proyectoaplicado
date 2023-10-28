@@ -69,6 +69,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -86,12 +87,51 @@
     <Compile Include="clases\Pedido.cs" />
     <Compile Include="clases\Producto.cs" />
     <Compile Include="clases\Proveedores.cs" />
+    <Compile Include="clases\Reportecliente.cs" />
+    <Compile Include="clases\Reportepedido.cs" />
     <Compile Include="clases\ventas.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPedidos.cs">
+      <DependentUpon>DataSetPedidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPedidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPedidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetProductos.cs">
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetventas.cs">
+      <DependentUpon>DataSetventas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetventas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetventas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LavanderiaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LavanderiaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Pantallalogueada.cs">
       <SubType>Form</SubType>
@@ -110,6 +150,24 @@
     </Compile>
     <Compile Include="Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportecliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportecliente.Designer.cs">
+      <DependentUpon>Reportecliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportepedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportepedidos.Designer.cs">
+      <DependentUpon>Reportepedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporteproductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteproductos.Designer.cs">
+      <DependentUpon>Reporteproductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes.cs">
       <SubType>Form</SubType>
@@ -143,6 +201,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporteventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporteventas.Designer.cs">
+      <DependentUpon>Reporteventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,11 +219,22 @@
     <EmbeddedResource Include="Pantallalogueada.resx">
       <DependentUpon>Pantallalogueada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pedido.rdlc" />
     <EmbeddedResource Include="Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedores.resx">
       <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producto.rdlc" />
+    <EmbeddedResource Include="Reportecliente.resx">
+      <DependentUpon>Reportecliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportepedidos.resx">
+      <DependentUpon>Reportepedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporteproductos.resx">
+      <DependentUpon>Reporteproductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
@@ -187,9 +262,68 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="facturaventas.rdlc" />
+    <EmbeddedResource Include="Reporteventas.resx">
+      <DependentUpon>Reporteventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="venta.rdlc" />
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPedidos.xsc">
+      <DependentUpon>DataSetPedidos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPedidos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPedidos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPedidos.xss">
+      <DependentUpon>DataSetPedidos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProductos.xsc">
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProductos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetProductos.xss">
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetventas.xsc">
+      <DependentUpon>DataSetventas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetventas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetventas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetventas.xss">
+      <DependentUpon>DataSetventas.xsd</DependentUpon>
+    </None>
+    <None Include="LavanderiaDataSet.xsc">
+      <DependentUpon>LavanderiaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LavanderiaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LavanderiaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LavanderiaDataSet.xss">
+      <DependentUpon>LavanderiaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -272,6 +406,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\atras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emblemunreadable_93487.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
